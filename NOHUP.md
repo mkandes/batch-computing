@@ -14,7 +14,7 @@
 A [process](https://en.wikipedia.org/wiki/Process_(computing)) is the instance of [computer program](https://en.wikipedia.org/wiki/Computer_program)
 that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
 
-### Estimating Pi
+### Estimating $\pi$
 
 ![Estimate the value of Pi via Monte Carlo](https://hpc.llnl.gov/sites/default/files/styles/no_sidebar_3_up/public/pi1.gif)
 
@@ -35,7 +35,7 @@ Start by cloning the repository to your local system.
   git clone https://github.com/mkandes/4pi.git
   ```
 
-*Shell*
+*Output*
 ```
 mkandes@hardtack:~$ git clone https://github.com/mkandes/4pi.git
 Cloning into '4pi'...
@@ -47,6 +47,37 @@ Unpacking objects: 100% (19/19), 5.72 KiB | 977.00 KiB/s, done.
 mkandes@hardtack:~$
 ```
 
+### bash/pi.sh
+
+We'll start with the `bash/pi.sh` shell script, which has three different command-line options that are required to be specified at runtime.
+
+*Command*
+
+```
+head -n 15 4pi/bash/pi.sh
+```
+
+*Output*
+
+```
+mkandes@hardtack:~$ head -n 15 4pi/bash/pi.sh 
+#!/usr/bin/env bash
+#
+# Estimate the value of Pi via Monte Carlo
+
+# Read in and parse input variables from command-line arguments
+if (( "${#}" > 0 )); then
+  while (( "${#}" > 0 )); do
+    case "${1}" in
+      -b | --bytes ) bytes="${2}" ;;
+      -r | --round ) round="${2}" ;;
+      -s | --samples ) samples="${2}" ;;
+    esac
+    shift 2
+  done
+fi
+mkandes@hardtack:~$
+```
 
 ## Additional References
 
