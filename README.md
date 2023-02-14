@@ -1,8 +1,13 @@
 # Getting Started with Batch Job Scheduling: Slurm Edition
 
-Batch job schedulers are used to manage and fairly distribute the shared resources of high-performance computing (HPC) systems. Learning how to interact with them and compose your work into batch jobs are essential skills to becoming an effective HPC user. In this tutorial, you will learn how to write your first batch job script and submit it to a batch job scheduler. You will also learn some best practices on how to structure your batch job scripts, how to leverage environment variables, and tips on how to request resources from the scheduler to get your work done faster. You will also be introduced to some advanced features like batch job arrays and dependencies that allow you to create more structured computational workflows.
+Batch job schedulers are used to manage and fairly distribute the shared resources of high-performance computing (HPC) systems. Learning how to interact with them and compose your work into batch jobs is essential to becoming an effective HPC user. 
 
-- [Nohup, no mas -- it's not nice: A quick review of managing Linux processes](NOHUP.md)
+In this tutorial, you will learn how to write your first batch job script and submit it to a batch job scheduler. You will also learn some best practices on how to structure your batch job scripts, leverage environment variables, and make better resource requests from the scheduler to get your work done faster. You will also be introduced to some advanced features like batch job arrays and dependencies that allow you to create more structured computational workflows.
+
+- [Nohup, No Mas -- It's Not Nice: A quick review of managing Linux processes](NOHUP.md)
+- [From Zero to Batch: Your first batch job and more](BATCH.md)
+- [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
+- [Beyond the Basics: Batch job arrays and dependencies](BEYOND.md)
 
 ## Additional References
 
