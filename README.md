@@ -12,6 +12,7 @@ In this tutorial, you will learn how to write your first batch job script and su
 ## Additional References
 
 - [Batch Jobs @ SDSC Summer Insitute 2022](https://github.com/sdsc/sdsc-summer-institute-2022/blob/main/2.4_batch_computing/MThomas-SDSC-SI22-Batch-Jobs-July-27-Computing-Jul2022.pdf)
+- [Slurm Quickstart User Guide](https://slurm.schedmd.com/quickstart.html)
 - 
 
 #
