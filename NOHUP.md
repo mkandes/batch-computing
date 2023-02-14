@@ -7,27 +7,21 @@
 
 ## Nohup No Mas: A quick review of managing Linux processes
 
-### What is a process?
+### What is a Process?
 
 <img src='https://upload.wikimedia.org/wikipedia/commons/2/25/Concepts-_Program_vs._Process_vs._Thread.jpg' width='50%' height='50%'/>
 
 A [process](https://en.wikipedia.org/wiki/Process_(computing)) is the instance of [computer program](https://en.wikipedia.org/wiki/Computer_program)
 that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
 
-### Modes of operation
+### Foreground vs. Background Processes
 
-There are two general types of processes:
-
-- 
-
-
-
-### Viewing running processes with the `top` command
-
-
+### Viewing Running Processes with the `top` command
 
 ## Additional References
 
+- https://en.wikipedia.org/wiki/Top_(software)
+- https://en.wikipedia.org/wiki/Kill_(command)
 - https://en.wikipedia.org/wiki/Nohup
 - https://en.wikipedia.org/wiki/Nice_(Unix)
 
