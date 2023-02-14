@@ -14,9 +14,11 @@
 A [process](https://en.wikipedia.org/wiki/Process_(computing)) is the instance of [computer program](https://en.wikipedia.org/wiki/Computer_program)
 that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
 
-### Foreground vs. Background Processes
+### Estimating Pi
 
-### Viewing Running Processes with the `top` command
+![Estimate the value of Pi via Monte Carlo](https://hpc.llnl.gov/sites/default/files/styles/no_sidebar_3_up/public/pi1.gif)
+
+Before we begin, in order to explore managing procesess, we'll need an example program to run. For this tutorial, we'll be working with the [4pi](https://github.com/mkandes/4pi) project, which is a collection of simple computer programs that estimate the value of $\pi$.
 
 ## Additional References
 
