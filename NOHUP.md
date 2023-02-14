@@ -48,7 +48,7 @@ Unpacking objects: 100% (19/19), 5.72 KiB | 977.00 KiB/s, done.
 
 ### bash/pi.sh
 
-We'll start with the `bash/pi.sh` shell script, which has three different command-line options that are required to be specified at runtime.
+We'll start with the `bash/pi.sh` shell script, which has three different command-line options that must be specified at runtime.
 
 *Command*
 
