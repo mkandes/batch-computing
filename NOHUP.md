@@ -14,7 +14,17 @@
 A [process](https://en.wikipedia.org/wiki/Process_(computing)) is the instance of [computer program](https://en.wikipedia.org/wiki/Computer_program)
 that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
 
-###
+### Modes of operation
+
+There are two general types of processes:
+
+- 
+
+
+
+### Viewing running processes with the `top` command
+
+
 
 ## Additional References
 
