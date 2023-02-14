@@ -14,7 +14,7 @@
 A [process](https://en.wikipedia.org/wiki/Process_(computing)) is the instance of [computer program](https://en.wikipedia.org/wiki/Computer_program)
 that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
 
-### Estimating $\pi$
+### Example Program: Estimating $\pi$ via Monte Carlo
 
 ![Estimate the value of Pi via Monte Carlo](https://hpc.llnl.gov/sites/default/files/styles/no_sidebar_3_up/public/pi1.gif)
 
