@@ -10,7 +10,7 @@
 ### What is a process?
 
 A [process](https://en.wikipedia.org/wiki/Process_(computing)) is the instance of [computer program](https://en.wikipedia.org/wiki/Computer_program)
-that is being executted by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
+that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Thread_(computing)).
 
 ## Additional References
 
