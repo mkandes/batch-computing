@@ -37,14 +37,13 @@ Start by cloning the repository to your local system.
 
 *Output*
 ```
-mkandes@hardtack:~$ git clone https://github.com/mkandes/4pi.git
+$ git clone https://github.com/mkandes/4pi.git
 Cloning into '4pi'...
 remote: Enumerating objects: 19, done.
 remote: Counting objects: 100% (19/19), done.
 remote: Compressing objects: 100% (10/10), done.
 remote: Total 19 (delta 4), reused 19 (delta 4), pack-reused 0
 Unpacking objects: 100% (19/19), 5.72 KiB | 977.00 KiB/s, done.
-mkandes@hardtack:~$
 ```
 
 ### bash/pi.sh
@@ -60,7 +59,7 @@ head -n 15 4pi/bash/pi.sh
 *Output*
 
 ```
-mkandes@hardtack:~$ head -n 15 4pi/bash/pi.sh 
+$ head -n 15 4pi/bash/pi.sh 
 #!/usr/bin/env bash
 #
 # Estimate the value of Pi via Monte Carlo
@@ -76,7 +75,6 @@ if (( "${#}" > 0 )); then
     shift 2
   done
 fi
-mkandes@hardtack:~$
 ```
 
 ## Additional References
