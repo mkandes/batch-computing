@@ -77,6 +77,24 @@ if (( "${#}" > 0 )); then
 fi
 ```
 
+### Estimating $\pi$ for the first time
+
+*Command* 
+
+```
+time -p bash 4pi/bash/pi.sh -b 8 -r 5 -s 1000
+```
+
+*Output*
+
+```
+$ time -p bash 4pi/bash/pi.sh -b 8 -r 5 -s 1000
+3.15200
+real 6.07
+user 5.31
+sys 1.14
+```
+
 ## Additional References
 
 - https://en.wikipedia.org/wiki/Top_(software)
