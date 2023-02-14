@@ -26,7 +26,7 @@ high-performance computing perspective. The first set of programs included in th
 solution is particularly useful for exploring different parallel programming models, languages, libraries, and APIs as it is an embarrassingly parallel
 (albeit inefficient) solution to the problem.
 
-### Clone the Repo to Your Local System
+### Clone the Repository
 
 Start by cloning the repository to your local system.
 
