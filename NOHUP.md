@@ -26,7 +26,7 @@ high-performance computing perspective. The first set of programs included in th
 solution is particularly useful for exploring different parallel programming models, languages, libraries, and APIs as it is an embarrassingly parallel
 (albeit inefficient) solution to the problem.
 
-### Cloning the Repo to Your Local System
+### Clone the Repo to Your Local System
 
 Start by cloning the repository to your local system.
 
@@ -35,7 +35,7 @@ Start by cloning the repository to your local system.
   git clone https://github.com/mkandes/4pi.git
   ```
 
-*Output*
+*Shell*
 ```
 mkandes@hardtack:~$ git clone https://github.com/mkandes/4pi.git
 Cloning into '4pi'...
