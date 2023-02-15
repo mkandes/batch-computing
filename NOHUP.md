@@ -98,6 +98,8 @@ fi
 
 ### Estimating $\pi$ for the first time
 
+Run the `pi.sh` script with the following input parameters below, and then increase the number of samples used to compute the estimate of $pi$.
+
 *Command* 
 
 ```
