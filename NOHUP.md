@@ -170,7 +170,27 @@ In contrast, a [**background process**](https://en.wikipedia.org/wiki/Background
 any user interaction. As such, once instantiated, you don't have to wait for the process to complete to execute another one. Background 
 processes may also sometime be referred to as *non-interactive processes*. Any software application that runs a 
 [daemon](https://en.wikipedia.org/wiki/Daemon_(computing)) is utilizing background processes. Examples include the SSH server-side 
-application that provides you remote access to your lab's workstation computer and the web server hosting this tutorial. 
+application that provides you remote access to your lab's workstation computer and the web server hosting this tutorial.
+
+### View Running Processes
+
+The [`top`](https://en.wikipedia.org/wiki/Top_(software)) command displays information about running processes such as 
+CPU utilization and memory utilization. The most *active*, resource-intensive processes are shown at the top of table. 
+In addition to providing summary resource usage statistics for the computer system as a whole, `top` displays the 
+following information for each process by default:
+
+- `PID`: Unique Process ID given to each process.
+- `USER`: Username of the process owner.
+- `PR`: Priority given to a process while scheduling.
+- `NI`: ‘nice’ value of a process.
+- `VIRT`: Amount of virtual memory used by a process.
+- `RES`: Amount of physical memory used by a process.
+- `SHR`: Amount of memory shared with other processes.
+- `S`: state of the process 
+- `%CPU`: Percentage of CPU used by the process.
+- `%MEM` :Percentage of RAM used by the process.
+- `TIME+`: Total CPU time consumed by the process.
+- `COMMAND`: Command used to activate the process.
 
 ## Additional References
 
