@@ -193,7 +193,7 @@ following information for each process by default:
 - `TIME+`: Total CPU time consumed by the process.
 - `COMMAND`: Command used to activate the process.
 
-### interrupt a Foreground Process from the Keyboard
+### Interrupt a Foreground Process from the Keyboard
 
 Re-run `pi.sh` with a large number of samples to increase its runtime (and accuracy) and then open another terminal to view the running process
 with the `top` command.
@@ -225,7 +225,7 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25209.0 avail Mem
 ```
 
 Return the terminal running `pi.sh` and interrupt the process by holding down the `ctrl` key with the letter `C`, which sends a `SIGINT` 
-signal to the process and terminiate it immediately.
+[signal](https://en.wikipedia.org/wiki/Signal_(IPC)) to the process and terminiates it immediately.
 
 *Output: Terminal 1*
 
