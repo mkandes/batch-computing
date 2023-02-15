@@ -334,8 +334,9 @@ What happens if you close the original terminal where you restarted `pi.sh`?
 
 ### Set It and Forget It
 
-`nohup` is short for *no hang up*. Any program started with the `nohup` command will ignore the [`SIGHUP`](https://en.wikipedia.org/wiki/SIGHUP)  
-signal and, therefore, allow the program and its process to continue to run, even after closing or exiting the terminal. 
+[`nohup`](https://en.wikipedia.org/wiki/Nohup) is short for *no hang up*. Any program started with the `nohup` command will ignore 
+the [`SIGHUP`](https://en.wikipedia.org/wiki/SIGHUP) signal and, therefore, allow the program and its process to continue to run,
+even after closing or exiting the terminal. 
 
 Restart `pi.sh` with `nohup`.
 
@@ -354,7 +355,7 @@ $ nohup: ignoring input and appending output to 'nohup.out'
 $
 ```
 
-### But Be Nice
+### But Be Good
 
 When working on a shared compute resource where you are manually managing processes, it's always good practice to set a 
 
