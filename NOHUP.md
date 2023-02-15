@@ -67,18 +67,18 @@ pi.sh
 
 ### bash/pi.sh
 
-We'll start with the `bash/pi.sh` shell script, which has three different command-line options that must be specified at runtime.
+We'll start the `pi.sh` shell script, which has three different command-line options that must be specified at runtime.
 
 *Command*
 
 ```
-head -n 15 4pi/bash/pi.sh
+head -n 15 pi.sh
 ```
 
 *Output*
 
 ```
-$ head -n 15 4pi/bash/pi.sh 
+$ head -n 15 pi.sh 
 #!/usr/bin/env bash
 #
 # Estimate the value of Pi via Monte Carlo
@@ -101,13 +101,13 @@ fi
 *Command* 
 
 ```
-time -p bash 4pi/bash/pi.sh -b 8 -r 5 -s 1000
+time -p ./pi.sh -b 8 -r 5 -s 1000
 ```
 
 *Output*
 
 ```
-$ time -p bash 4pi/bash/pi.sh -b 8 -r 5 -s 1000
+$ time -p ./pi.sh -b 8 -r 5 -s 1000
 3.15200
 real 6.07
 user 5.31
