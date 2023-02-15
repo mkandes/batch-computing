@@ -6,7 +6,7 @@ In this tutorial, you will learn how to write your first batch job script and su
 
 ## Disclaimer: :running: on :penguin:
 
-HPC and advanced CI run on Linux. If you don't believe me, look no further than the latest statistics from the [TOP500](https://www.top500.org/statistics/list) --- a list of the most powerful supercomputers in the world. In this tutorial we will use --- *almost exclusively* --- standard command-line tools and applications that are available for [Unix-like](https://en.wikipedia.org/wiki/Unix-like) operating systems such as Linux and macOS. Recommendation for Windows users: Install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) on your personal computer at some point, if you haven't done so already. 
+HPC and advanced CI run on [Linux](https://en.wikipedia.org/wiki/Linux). If you don't believe me, look no further than the latest statistics from the [TOP500](https://www.top500.org/statistics/list) --- a list of the most powerful supercomputers in the world. In this tutorial we will use --- *almost exclusively* --- standard command-line tools and applications that are available for [Unix-like](https://en.wikipedia.org/wiki/Unix-like) operating systems such as Linux and macOS. Recommendation for Windows users: Install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) on your personal computer at some point, if you haven't done so already. 
 
 ## Learning Goals
 
