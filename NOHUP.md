@@ -98,7 +98,7 @@ fi
 
 ### Estimating $\pi$ for the first time
 
-Run `pi.sh` with these initial input parameters, then increase the number of samples (`-s`) used to estimate $pi$.
+Run `pi.sh` with these initial input parameters, then increase the number of samples (`-s`) used to estimate $\pi$.
 
 *Command* 
 
