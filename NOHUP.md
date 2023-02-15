@@ -283,8 +283,8 @@ integer value?
 
 ### How to Kill a Background Process
 
-While `top` continues to run on your `bash` command from `pi.sh`, open a new terminal and 
-[`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process. 
+While `top` continues to run on your `bash` command from `pi.sh`, [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process from
+the other terminal. 
 
 *Command: Terminal 2*
 
@@ -310,7 +310,7 @@ Then use `top` again to display the process again, but from the other terminal.
 top -p 3990462
 ```
 
-What happens if you close the terminal where you originally restarted `pi.sh`?
+What happens if you close the original terminal where you restarted `pi.sh`?
 
 
 ## Additional References
