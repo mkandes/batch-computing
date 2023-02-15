@@ -301,12 +301,33 @@ from the same terminal.
 time -p ./pi.sh -b 8 -r 5 -s 100000 &
 ```
 
+*Output: Terminal 1*
+
+```
+$ time -p ./pi.sh -b 8 -r 5 -s 100000 &
+[1] 3990461
+$
+```
+
 Then use `top` again to display the process, but from the other terminal.
 
 *Command: Terminal 2*
 
 ```
 top -p 3990462
+```
+
+*Output: Terminal 2*
+
+```
+top - 15:41:44 up 1 day,  9:03,  1 user,  load average: 2.83, 2.31, 2.03
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 14.3 us, 11.6 sy,  0.0 ni, 73.9 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st
+MiB Mem :  31820.4 total,  17598.8 free,   5143.1 used,   9078.6 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25115.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+3990462 mkandes   20   0    9500   3232   2964 S  12.7   0.0   0:23.85 bash
 ```
 
 What happens if you close the original terminal where you restarted `pi.sh`?
