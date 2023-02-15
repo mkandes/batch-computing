@@ -298,8 +298,7 @@ from the same terminal.
 *Command: Terminal 1*
 
 ```
-$ time -p ./pi.sh -b 8 -r 5 -s 100000 &
-[2] 3990461
+time -p ./pi.sh -b 8 -r 5 -s 100000 &
 ```
 
 Then use `top` again to display the process again, but from the other terminal.
