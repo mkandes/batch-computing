@@ -103,17 +103,14 @@ Run `pi.sh` with these initial input parameters, then increase the number of sam
 *Command* 
 
 ```
-time -p ./pi.sh -b 8 -r 5 -s 1000
+./pi.sh -b 8 -r 5 -s 1000
 ```
 
 *Output*
 
 ```
-$ time -p ./pi.sh -b 8 -r 5 -s 1000
+$ ./pi.sh -b 8 -r 5 -s 1000
 3.15200
-real 6.07
-user 5.31
-sys 1.14
 ```
 
 ## Additional References
