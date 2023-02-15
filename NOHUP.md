@@ -163,8 +163,11 @@ input/output (I/O) directly connected to either a [command-line interface (CLI)]
 user programs run as foregound processes by default. Foreground processes may also sometimes be referred to as *interactive processes*. 
 Examples include your operating system's terminal application, your web broswer, and your video conferencing software.
 
-In contrast, [**background processes**](https://en.wikipedia.org/wiki/Background_process) are processes that run programs independently of 
-any user interaction.
+![top](top.png)
+
+In contrast, a [**background process**](https://en.wikipedia.org/wiki/Background_process) is a process that runs a program independently of 
+any user interaction. As such, once instantiated, you don't have to wait for the process to complete to execute another one. Background 
+processes may also sometime be referred to as *non-interactive processes*. 
 
 ## Additional References
 
