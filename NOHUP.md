@@ -168,7 +168,9 @@ Examples include your operating system's terminal application, your web broswer,
 
 In contrast, a [**background process**](https://en.wikipedia.org/wiki/Background_process) is a process that runs a program independently of 
 any user interaction. As such, once instantiated, you don't have to wait for the process to complete to execute another one. Background 
-processes may also sometime be referred to as *non-interactive processes*. 
+processes may also sometime be referred to as *non-interactive processes*. Any software application that runs a 
+[daemon](https://en.wikipedia.org/wiki/Daemon_(computing)) is utilizing background processes. Examples include the SSH server-side 
+application that provides you remote access to your lab's workstation computer and the web server hosting this tutorial. 
 
 ## Additional References
 
