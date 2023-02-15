@@ -291,7 +291,24 @@ While `top` continues to run on your `bash` command from `pi.sh`, open a new ter
 kill  2737701
 ```
 
-When executed, you should see the process `Terminated` and disappear from `top`'s process table.
+When executed, you should see the process `Terminated` and disappear from `top`'s process table. Exit `top` and restart `pi.sh`. 
+
+*Command*
+
+```
+$ time -p ./pi.sh -b 8 -r 5 -s 100000 &
+[2] 3990461
+```
+
+Then open another terminal again and use `top` to display the process.
+
+*Command*
+
+```
+top -p 3990462
+```
+
+What happens if you close the terminal where you originally restarted `pi.sh`?
 
 
 ## Additional References
