@@ -58,6 +58,29 @@ $ ls python/
 pi.py
 $ ls fortran/
 Makefile  pi.f90  pi_omp.f90
+$ cat fortran/Makefile 
+COMPILER := gfortran
+COMPILER_OPTIONS := -ffree-form -ffree-line-length-none -fimplicit-none \
+                    -O3 -mtune=native -fdefault-integer-8 -fdefault-real-8
+
+all: pi.x pi_omp.x
+
+pi.x: pi.o
+	$(COMPILER) $(COMPILER_OPTIONS) -o pi.x pi.o
+
+pi.o: pi.f90
+	$(COMPILER) $(COMPILER_OPTIONS) -c pi.f90
+
+pi_omp.x: pi_omp.o
+	$(COMPILER) $(COMPILER_OPTIONS) -fopenmp -o pi_omp.x pi_omp.o
+
+pi_omp.o: pi_omp.f90
+	$(COMPILER) $(COMPILER_OPTIONS) -fopenmp -c pi_omp.f90
+
+.PHONY: clean
+clean:
+	rm *.x *.o
+mkandes@hardtack:~/4pi$
 $ ls c/
 pi.c
 $ cd bash/
