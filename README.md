@@ -1,4 +1,4 @@
-# Getting Started with Batch Job Scheduling: Slurm Edition
+## Getting Started with Batch Job Scheduling: Slurm Edition
 
 Batch job schedulers are used to manage and fairly distribute the shared resources of high-performance computing (HPC) systems. Learning how to interact with them and compose your work into batch jobs is essential to becoming an effective HPC user. 
 
