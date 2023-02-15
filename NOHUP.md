@@ -235,6 +235,7 @@ $ time -p ./pi.sh -b 8 -r 5 -s 100000
 real 169.53
 user 148.93
 sys 31.79
+$
 ```
 
 ### Background a Process
