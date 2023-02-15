@@ -195,7 +195,6 @@ following information for each process by default:
 
 ## Additional References
 
-- https://en.wikipedia.org/wiki/Top_(software)
 - https://en.wikipedia.org/wiki/Kill_(command)
 - https://en.wikipedia.org/wiki/Nohup
 - https://en.wikipedia.org/wiki/Nice_(Unix)
