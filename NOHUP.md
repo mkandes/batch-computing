@@ -80,7 +80,6 @@ pi_omp.o: pi_omp.f90
 .PHONY: clean
 clean:
 	rm *.x *.o
-mkandes@hardtack:~/4pi$
 $ ls c/
 pi.c
 $ cd bash/
