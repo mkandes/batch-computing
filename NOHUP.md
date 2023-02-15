@@ -46,6 +46,25 @@ remote: Total 19 (delta 4), reused 19 (delta 4), pack-reused 0
 Unpacking objects: 100% (19/19), 5.72 KiB | 977.00 KiB/s, done.
 ```
 
+### Explore the Repository
+
+Take a look at the code available in the repository. 
+
+```
+$ cd 4pi/
+$ ls
+bash  c  fortran  LICENSE.md  python  README.md
+$ ls python/
+pi.py
+$ ls fortran/
+Makefile  pi.f90  pi_omp.f90
+$ ls c/
+pi.c
+$ cd bash/
+$ ls bash/
+pi.sh
+```
+
 ### bash/pi.sh
 
 We'll start with the `bash/pi.sh` shell script, which has three different command-line options that must be specified at runtime.
