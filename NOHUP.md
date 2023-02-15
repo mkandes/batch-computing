@@ -173,7 +173,7 @@ application that provides you remote access to your lab's workstation computer a
 ### View Running Processes
 
 The [`top`](https://en.wikipedia.org/wiki/Top_(software)) command displays information about running processes such as 
-CPU utilization and memory utilization. The most *active*, resource-intensive processes are shown at the top of table.
+CPU and memory utilization. The most *active*, resource-intensive processes are shown at the top of table.
 
 ![top](top.png)
 
