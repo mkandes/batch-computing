@@ -242,13 +242,13 @@ sys 31.79
 You can run any command from your terminal as a background process by appending it with a space and then the ampersand (`&`) symbol. For example,
 re-run `pi.sh` with a large number of samples again.
 
-*Command* 
+*Command: Terminal 1* 
 
 ```
 time -p ./pi.sh -b 8 -r 5 -s 100000 &
 ```
 
-*Output*
+*Output: Terminal 1*
 
 ```
 $ time -p ./pi.sh -b 8 -r 5 -s 100000 &
@@ -259,13 +259,13 @@ $
 After printing the`PID` of the background process to standard output, the shell prompt is returned to your control, where you can run 
 another command such as viewing the background process with `top`. 
 
-*Command*
+*Command: Terminal 1*
 
 ```
 top -p "$(($!+1))"
 ```
 
-*Output*
+*Output: Terminal 1*
 
 ```
 Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
@@ -285,24 +285,25 @@ integer value?
 While `top` continues to run on your `bash` command from `pi.sh`, open a new terminal and 
 [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process. 
 
-*Command*
+*Command: Terminal 2*
 
 ```
 kill  2737701
 ```
 
-When executed, you should see the process `Terminated` and disappear from `top`'s process table. Exit `top` and restart `pi.sh`. 
+When executed, you should see the process `Terminated` and disappear from `top`'s process table. Next, exit `top` and restart `pi.sh` 
+from the same terminal. 
 
-*Command*
+*Command: Terminal 1*
 
 ```
 $ time -p ./pi.sh -b 8 -r 5 -s 100000 &
 [2] 3990461
 ```
 
-Then open another terminal again and use `top` to display the process.
+Then use `top` again to display the process again, but from the other terminal.
 
-*Command*
+*Command: Terminal 2*
 
 ```
 top -p 3990462
