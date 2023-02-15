@@ -356,6 +356,27 @@ $
 
 ### But Be Nice
 
+When working on a shared compute resource where you are manually managing processes, it's always good practice to set a 
+
+```
+$ lscpu
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   39 bits physical, 48 bits virtual
+CPU(s):                          8
+On-line CPU(s) list:             0-7
+Thread(s) per core:              2
+Core(s) per socket:              4
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           140
+Model name:                      11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
+...
+```
+
 
 ## Additional References
 
