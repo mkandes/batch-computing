@@ -237,6 +237,49 @@ user 148.93
 sys 31.79
 ```
 
+### Background a Process
+
+You can run any command from your terminal as a background process by appending it with a space and then the ampersand (`&`) symbol. For example,
+re-run `pi.sh` with a large number of samples again.
+
+*Command* 
+
+```
+time -p ./pi.sh -b 8 -r 5 -s 100000 &
+```
+
+*Output*
+
+```
+$ time -p ./pi.sh -b 8 -r 5 -s 100000 &
+[1] 1918403
+$
+```
+
+After printing the`PID` of the background process to standard output, the shell prompt is returned to your control, where you can run 
+another command such as viewing the background process with `top`. 
+
+*Command*
+
+```
+top -p "$(($!+1))"
+```
+
+*Output*
+
+```
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  9.4 us,  9.4 sy,  0.0 ni, 81.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  31820.4 total,  17271.1 free,   5583.0 used,   8966.3 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  24732.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+2737701 mkandes   20   0    9500   3404   3136 S  13.3   0.0   0:16.69 bash
+```
+
+Here, we've used the special environment variable `$!`, which returns the `PID` of the last executed command. Why do we add `+1` to this 
+integer value?
+
 ## Additional References
 
 - https://en.wikipedia.org/wiki/Kill_(command)
