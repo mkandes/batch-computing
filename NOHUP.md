@@ -164,7 +164,7 @@ A **foreground process** is a process that runs a shell command or program immed
 user programs run as foregound processes by default. Foreground processes may also sometimes be referred to as *interactive processes*. 
 Examples include your operating system's terminal application, your web broswer, and your video conferencing software.
 
-![top](top.png)
+![top](top.png | width=50)
 
 In contrast, a [**background process**](https://en.wikipedia.org/wiki/Background_process) is a process that runs a program independently of 
 any user interaction. As such, once instantiated, you don't have to wait for the process to complete to execute another one. Background 
