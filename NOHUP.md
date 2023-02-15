@@ -115,7 +115,7 @@ $ ./pi.sh -b 8 -r 5 -s 1000
 
 ### Measuring Runtime
 
-Prepend the `time` command to measure runtime of the program.
+Measure the runtime of the program with the `time` command.
 
 *Command* 
 
