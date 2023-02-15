@@ -252,7 +252,7 @@ time -p ./pi.sh -b 8 -r 5 -s 100000 &
 
 ```
 $ time -p ./pi.sh -b 8 -r 5 -s 100000 &
-[1] 1918403
+[1] 2737701
 $
 ```
 
@@ -280,9 +280,22 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  24732.1 avail Mem
 Here, we've used the special environment variable `$!`, which returns the `PID` of the last executed command. Why do we add `+1` to this 
 integer value?
 
+### Kill a Background Process
+
+While `top` continues to run on your `bash` command from `pi.sh`, open a new terminal and [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process. 
+
+*Command*
+
+```
+kill  2737701
+```
+
+
+
+
+
 ## Additional References
 
-- https://en.wikipedia.org/wiki/Kill_(command)
 - https://en.wikipedia.org/wiki/Nohup
 - https://en.wikipedia.org/wiki/Nice_(Unix)
 
