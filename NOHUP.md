@@ -224,8 +224,8 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25209.0 avail Mem
 ...
 ```
 
-Return the terminal running `pi.sh` and interrupt the process by holding down the `ctrl` key with the letter `C`, which sends a `SIGINT` 
-[signal](https://en.wikipedia.org/wiki/Signal_(IPC)) to the process and terminiates it immediately.
+Return to the terminal running `pi.sh` and interrupt the process by holding down the `ctrl` key with the letter `C` on your keyboard, 
+which sends a `SIGINT` [signal](https://en.wikipedia.org/wiki/Signal_(IPC)) to the process and terminiates it immediately.
 
 *Output: Terminal 1*
 
@@ -280,9 +280,10 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  24732.1 avail Mem
 Here, we've used the special environment variable `$!`, which returns the `PID` of the last executed command. Why do we add `+1` to this 
 integer value?
 
-### Kill a Background Process
+### How to Kill a Background Process
 
-While `top` continues to run on your `bash` command from `pi.sh`, open a new terminal and [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process. 
+While `top` continues to run on your `bash` command from `pi.sh`, open a new terminal and 
+[`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process. 
 
 *Command*
 
@@ -290,8 +291,7 @@ While `top` continues to run on your `bash` command from `pi.sh`, open a new ter
 kill  2737701
 ```
 
-
-
+When executed, you should see the process `Terminated` and disappear from `top`'s process table.
 
 
 ## Additional References
