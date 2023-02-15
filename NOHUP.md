@@ -155,7 +155,16 @@ user 5.37
 sys 1.13
 ```
 
+### Background vs. Foreground Processes
 
+A *foreground process* is a process that runs a shell command or program immediately upon instantiation by a user and may have its 
+input/output (I/O) directly connected to either a [command-line interface (CLI)](https://en.wikipedia.org/wiki/Command-line_interface) or a 
+[graphical user interface (GUI)](https://en.wikipedia.org/wiki/Graphical_user_interface) to comminicate with the user. All shell commands and 
+user programs run as foregound processes by default. Foreground processes may also sometimes be referred to as *interactive processes*. 
+Examples include your operating system's terminal application, your web broswer, and your video conferencing software.
+
+In contrast, [*background processes*](https://en.wikipedia.org/wiki/Background_process) are processes that run programs independently of 
+any user interaction.
 
 ## Additional References
 
