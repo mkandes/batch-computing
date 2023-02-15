@@ -65,9 +65,9 @@ $ ls bash/
 pi.sh
 ```
 
-### bash/pi.sh
+### Working with bash/pi.sh
 
-We'll start the `pi.sh` shell script, which has three different command-line options that must be specified at runtime.
+We'll start with the `pi.sh` shell script, which has three different command-line options that must be specified at runtime.
 
 *Command*
 
