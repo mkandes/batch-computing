@@ -301,7 +301,7 @@ from the same terminal.
 time -p ./pi.sh -b 8 -r 5 -s 100000 &
 ```
 
-Then use `top` again to display the process again, but from the other terminal.
+Then use `top` again to display the process, but from the other terminal.
 
 *Command: Terminal 2*
 
