@@ -113,6 +113,28 @@ $ ./pi.sh -b 8 -r 5 -s 1000
 3.15200
 ```
 
+### Measuring Runtime
+
+Prepend the `time` command to measure runtime of the program.
+
+*Command* 
+
+```
+time -p ./pi.sh -b 8 -r 5 -s 1000
+```
+
+*Output*
+
+```
+$ time -p ./pi.sh -b 8 -r 5 -s 1000
+3.18400
+real 6.13
+user 5.37
+sys 1.13
+```
+
+
+
 ## Additional References
 
 - https://en.wikipedia.org/wiki/Top_(software)
