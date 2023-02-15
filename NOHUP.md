@@ -193,6 +193,37 @@ following information for each process by default:
 - `TIME+`: Total CPU time consumed by the process.
 - `COMMAND`: Command used to activate the process.
 
+### Kill a Foreground Process from the Keyboard
+
+Re-run `pi.sh` with a large number of samples to increase its runtime (and accuracy) and then open another terminal to view the running process
+with the `top` command.
+
+*Command: Terminal 1* 
+
+```
+time -p ./pi.sh -b 8 -r 5 -s 100000
+```
+
+*Command: Terminal 2* 
+
+```
+top -u $USER
+```
+
+*Output: Terminal 2*
+
+```
+top - 12:05:06 up 1 day,  5:26,  1 user,  load average: 1.42, 1.62, 1.29
+Tasks: 304 total,   1 running, 302 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  7.3 us, 11.2 sy,  0.0 ni, 81.4 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  31820.4 total,  18022.0 free,   5115.7 used,   8682.7 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25209.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+1091257 mkandes   20   0    9500   3304   3036 S  12.0   0.0   0:08.19 bash
+...
+```
+
 ## Additional References
 
 - https://en.wikipedia.org/wiki/Kill_(command)
