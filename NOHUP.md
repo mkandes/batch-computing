@@ -281,7 +281,7 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  24732.1 avail Mem
 Here, we've used the special environment variable `$!`, which returns the `PID` of the last executed command. Why do we add `+1` to this 
 integer value?
 
-### How to Kill a Background Process
+### Kill a Background Process
 
 While `top` continues to run on your `bash` command from `pi.sh`, [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process from
 the other terminal. 
