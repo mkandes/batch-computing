@@ -363,6 +363,12 @@ command that allows you to assign and execute a program with a relative CPU prio
 assigned to a process, while **19** is the lowest. Note, however, only the `root` user can set the nice value from -20 to 19. Regular users can 
 only set nice values from 0 to 19. The default value is **0**. 
 
+*Command*
+
+```
+nohup nice -n 19 time -p python3 pi.py 100000000 &
+```
+
 #
 
 Next Section - [From Zero to Batch: Your first batch job and more](BATCH.md)
