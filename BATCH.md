@@ -11,6 +11,10 @@
 
 ![standard-hpc-ecosystem](standard-hpc-ecosystem.jpg)
 
+<br>
+<br>
+<br>
+
 ### HPC System Architecture
 
 ![expanse-system-architecture](expanse-system-architecture.png)
@@ -18,9 +22,17 @@
 - [Expanse: Computing Without Boundaries](https://expanse.sdsc.edu)
 - [Expanse: Building a Supercomputer](https://www.youtube.com/watch?v=uNZyg6X_t3s)
 
+<br>
+<br>
+<br>
+
 ### HPC Storage Systems & External Networks
 
 ![expanse-storage-external-networks](expanse-storage-external-networks.png)
+
+<br>
+<br>
+<br>
 
 ### You as a New HPC User
 
