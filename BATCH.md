@@ -22,10 +22,11 @@
 
 ![expanse-storage-external-networks](expanse-storage-external-networks.png)
 
-### Your Standard New HPC User
+### You as a New HPC User
 
-### Your HPC Community When The System Is Down (or Busy)
+![homer-simpson-glasses](homer-simpson-glasses.jpg)
 
+### Your HPC Community (When You Brake the System)
 
 ### Managing an HPC System
 
