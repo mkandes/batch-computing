@@ -38,8 +38,6 @@
 
 ![homer-simpson-glasses](homer-simpson-glasses.jpg)
 
-<br>
-
 ![homer-computer-doh](homer-computer-doh.jpg)
 
 <br>
