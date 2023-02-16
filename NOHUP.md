@@ -344,7 +344,7 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5367.4 avail Mem
   26511 ubuntu    20   0   17612  10948   6204 R  99.5   0.2   2:01.61 python3
 ```
 
-What happens if you close the original terminal where you restarted `pi.sh`?
+What happens if you close the original terminal where you restarted `pi.py`?
 
 ### Set It and Forget It
 
