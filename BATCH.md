@@ -25,7 +25,7 @@
 ### Managing an HPC System: The Scheduler
 
 [Slurm](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) is an open source, fault-tolerant, and highly 
-scalable HPC management and job scheduling system.
+scalable HPC resource manager and job scheduling system.
 
 ![slurm-architecture](https://slurm.schedmd.com/arch.gif)
 
