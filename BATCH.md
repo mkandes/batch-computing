@@ -102,41 +102,24 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           20753111   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
           20753161   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
           20753205   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
-          20753204   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
-          20753211   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
-          20753212   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
-          20753213   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
+          ...
           20754621   compute    scav2  apham78 PD       0:00      4 (Dependency)
           20754620   compute    scav2  apham78 PD       0:00      4 (Dependency)
           20754619   compute    scav2  apham78 PD       0:00      4 (Dependency)
-          20754618   compute    scav2  apham78 PD       0:00      4 (Dependency)
-          20754617   compute    scav2  apham78 PD       0:00      4 (Dependency)
-          20754616   compute    scav2  apham78 PD       0:00      4 (Dependency)
-          20754615   compute    scav2  apham78 PD       0:00      4 (Dependency)
-          20754614   compute    scav2  apham78 PD       0:00      4 (Dependency)
-          20754613   compute    scav2  apham78 PD       0:00      4 (Dependency)
+          ...
           20753239   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
           20753215   compute tio2_tem    rw624 PD       0:00     14 (QOSMaxCpuPerUserLimit)
           20677210   compute D8.00_q0    healy PD       0:00     10 (Dependency)
           20677209   compute D8.00_q0    healy PD       0:00     10 (Dependency)
           20677230   compute D24.55_q    healy PD       0:00      6 (Dependency)
-          20677228   compute D24.55_q    healy PD       0:00      6 (Dependency)
-          20677221   compute D24.55_q    healy PD       0:00      6 (Dependency)
-          20677219   compute D24.55_q    healy PD       0:00      6 (Dependency)
-          20677218   compute D24.55_q    healy PD       0:00      6 (Dependency)
-          20677217   compute D24.55_q    healy PD       0:00      6 (Dependency)
+          ...
           20677216   compute D24.55_q    healy PD       0:00      6 (Dependency)
           18495201   compute NGBW-JOB  nsguser PD       0:00      1 (launch failed requeued held)
           20722553   compute Nf2L28Ru nkarthik  R 1-23:53:09      1 exp-3-22
           20723048   compute   nozzle  ajavadi  R 1-23:05:26      4 exp-8-[37-40]
           20723398   compute Nf2L28Ru nkarthik  R 1-22:33:52      1 exp-2-15
           20724107   compute Nf2L28Ru nkarthik  R 1-22:27:51      1 exp-2-34
-          20725876   compute Nf2L28Ru nkarthik  R 1-22:24:51      1 exp-12-03
-          20725886   compute Nf6L24Ru nkarthik  R 1-22:23:51      1 exp-3-03
-          20726246   compute Nf6L24Ru nkarthik  R 1-22:01:47      1 exp-3-27
-          20726270   compute Nf6L24Ru nkarthik  R 1-21:59:47      1 exp-10-47
-          20726337   compute Nf6L28Ru nkarthik  R 1-21:55:47      1 exp-8-03
-          20726350   compute Nf6L28Ru nkarthik  R 1-21:53:47      1 exp-8-02
+          ...
           20726357   compute Nf6L28Ru nkarthik  R 1-21:51:47      1 exp-2-01
           20726375   compute Nf6L28Ru nkarthik  R 1-21:50:47      1 exp-14-27
           20726393   compute Nf6L28Ru nkarthik  R 1-21:47:47      1 exp-2-02
