@@ -72,10 +72,20 @@ Last login: Wed Feb 15 14:35:40 2023 from 208.58.214.56
 
 And then take your first look around with `top`. 
 
+![top-login-node](top-login-node.png)
+
+You are not alone
+
+### The Rules of HPC Club
 
 
 
-You are not alone!
+1. Do not run
+
+2. DO NOT run on the login nodes.
+
+
+
 
 
 
