@@ -74,23 +74,15 @@ And then take your first look around with `top`.
 
 ![top-login-node](top-login-node.png)
 
-You are not alone
+You are not alone!
 
 ### The Rules of HPC Club
 
+![top-bad-user](top-bad-user.png)
 
-
-1. Do not run
-
-2. DO NOT run on the login nodes.
-
-
-
-
-
-
-
-
+1. You do not run computationally-intensive work on the login nodes.
+2. You DO NOT run computationally-intensive work on the login nodes.
+3. All computationally-intensive work should be run as either a batch or interactive job on the compute nodes.
 
 *Command*
 
