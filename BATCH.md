@@ -38,6 +38,12 @@
 
 ![homer-simpson-glasses](homer-simpson-glasses.jpg)
 
+<br>
+<br>
+<br>
+
+### You Will Make Mistakes --- That's Okay, But ...
+
 ![homer-computer-doh](homer-computer-doh.jpg)
 
 <br>
@@ -48,6 +54,9 @@
 
 ![simpsons-angry-mob](simpsons-angry-mob.png)
 
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
