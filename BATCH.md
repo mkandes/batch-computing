@@ -83,6 +83,7 @@ You are not alone!
 1. You do not run computationally-intensive work on the login nodes.
 2. You DO NOT run computationally-intensive work on the login nodes.
 3. All computationally-intensive work should be run as either a batch or interactive job on the compute nodes.
+4. ... *To be continued* ...
 
 *Command*
 
