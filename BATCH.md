@@ -272,7 +272,7 @@ bintest    gromacs   mpi-openmp-hybrid  paraview  spark       xpmem
 ciml       hadoop    namd               pyscf     tensorflow
 classes    hpcg      neuron             pytorch   test
 cp2k       hpl       nsight             qchem     trinity
-[mkandes@login01 ~]$
+[username@login01 ~]$
 ```
 
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
