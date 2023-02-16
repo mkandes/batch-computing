@@ -13,7 +13,7 @@
 
 ### System Architecture
 
-![](https://www.sdsc.edu/assets/images/expanse_web_banner-1220.jpg)
+![expanse-system-architecture](expanse-system-architecture.png)
 
 ### Storage Systems & External Networks
 
