@@ -364,9 +364,15 @@ nohup time -p python3 pi.py 100000000 &
 
 ```
 $ nohup time -p python3 pi.py 100000000 &
-[1] 26617
+[1] 26663
 $ nohup: ignoring input and appending output to 'nohup.out'
-$
+$ top -u $USER
+[1]+  Done                    nohup time -p python3 pi.py 100000000
+$ cat nohup.out 
+3.1416010314160103
+real 62.66
+user 62.63
+sys 0.00
 ```
 
 ### Controlling Priority
@@ -377,7 +383,7 @@ at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the co
 you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the 
 highest priority that can be assigned to a process, while **19** is the lowest. Note, however, 
 only the `root` user can set the nice value from -20 to 19. Regular users can only set nice values
-from 0 to 19. The default value is **0**. 
+between 0 and 19. The default value is **0**. 
 
 *Command*
 
@@ -396,18 +402,50 @@ nohup time -p python3 pi.py 100000000 &
 *Output*
 
 ```
-top - 03:36:17 up 2 min,  1 user,  load average: 1.45, 0.52, 0.19
-Tasks: 166 total,   4 running, 162 sleeping,   0 stopped,   0 zombie
-%Cpu(s): 50.1 us,  0.0 sy, 49.9 ni,  0.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-MiB Mem :   5934.0 total,   4779.8 free,    331.7 used,    822.5 buff/cache
-MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5366.7 avail Mem 
+$ nohup nice -19 time -p python3 pi.py 100000000 &
+[1] 26684
+$ nohup: ignoring input and appending output to 'nohup.out'
+$ nohup nice time -p python3 pi.py 100000000 &
+[2] 26686
+$ nohup: ignoring input and appending output to 'nohup.out'
+$ nohup time -p python3 pi.py 100000000 &
+[3] 26688
+$ nohup: ignoring input and appending output to 'nohup.out'
+$ top -u $USER
+top - 04:24:03 up 50 min,  1 user,  load average: 1.24, 0.89, 0.75
+Tasks: 151 total,   4 running, 147 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 50.0 us,  0.0 sy, 50.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   5934.0 total,   4424.2 free,    311.8 used,   1197.9 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5376.4 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
-  25753 ubuntu    20   0   17624  11024   6268 R 100.0   0.2   0:25.44 python3  
-  25751 ubuntu    30  10   17624  10884   6128 R  88.0   0.2   0:27.45 python3  
-  25749 ubuntu    39  19   17624  10884   6128 R  12.0   0.2   0:17.17 python3  
-  19423 ubuntu    20   0   19196  10032   8312 S   0.0   0.2   0:00.07 systemd
+  26689 ubuntu    20   0   17624  10988   6228 R 100.0   0.2   0:20.58 python3  
+  26687 ubuntu    30  10   17624  10932   6176 R  88.0   0.2   0:23.07 python3  
+  26685 ubuntu    39  19   17624  11008   6252 R  12.0   0.2   0:15.51 python3
 ...
+
+$
+[1]   Done                    nohup nice -19 time -p python3 pi.py 100000000
+[2]-  Done                    nohup nice time -p python3 pi.py 100000000
+[3]+  Done                    nohup time -p python3 pi.py 100000000
+$ cat nohup.out 
+3.1416010314160103
+real 62.66
+user 62.63
+sys 0.00
+3.1416058314160584
+real 61.26
+user 61.23
+sys 0.00
+3.1416926314169262
+real 67.51
+user 60.09
+sys 0.00
+3.1417805114178052
+real 115.07
+user 61.15
+sys 0.00
+$
 ```
 
 #
