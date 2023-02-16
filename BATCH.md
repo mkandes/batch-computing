@@ -83,7 +83,20 @@ You are not alone!
 1. You do not run computationally-intensive work on the login nodes.
 2. You DO NOT run computationally-intensive work on the login nodes.
 3. All computationally-intensive work should be run as either a batch or interactive job on the compute nodes.
-4. ... *To be continued* ...
+4. *To be continued* ...
+
+### What is a Batch Job?
+
+A batch job is a computer program or set of programs processed in batch mode, meaning they are typically executed without user interaction, 
+and often at a time when the computer is otherwise idle.
+
+In high-performance computing (HPC) environments, batch jobs are used to run large-scale simulations, perform complex data analysis, and 
+run other types of demanding computational tasks. In an HPC environment, a batch job is typically submitted to a queue and managed by a job 
+scheduler, which assigns the job to available resources and ensures that the job runs efficiently.
+
+### Viewing Information About Jobs 
+
+https://slurm.schedmd.com/squeue.html
 
 *Command*
 
@@ -137,8 +150,70 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 [username@login01 ~]$
 ```
 
-### Clone the Repository
+### Viewing Information About Nodes
 
+https://slurm.schedmd.com/sinfo.html
+
+*Command*
+
+```
+sinfo
+```
+
+*Output*
+
+```
+[username@login01 ~]$ sinfo
+PARTITION      AVAIL  TIMELIMIT  NODES  STATE NODELIST
+compute           up 2-00:00:00      1  drng@ exp-2-40
+compute           up 2-00:00:00      4 drain$ exp-8-[13-16]
+compute           up 2-00:00:00      2 drain* exp-13-[55-56]
+compute           up 2-00:00:00      8   resv exp-16-[53-56],exp-17-[53-56]
+compute           up 2-00:00:00    124    mix exp-1-[01-24,26-27,29-33,35-38,40-45,48,50,53-56],exp-2-[04-05,07,09,12,14,16,18,21,25-26,35,38,41,45-46,53-54,56],exp-3-[01-02,09,11,19,22,25,28,33,39,45-46,53-55],exp-4-[14,22,25-26,56],exp-5-[31,42,45-46],exp-6-[15,18,22,39-40,49,52],exp-7-[01,18,20,24],exp-8-[01,04,06,08-09,12,35-36,41],exp-9-[16,20,51],exp-10-[19-22,56],exp-13-[50-54],exp-14-29
+compute           up 2-00:00:00    375  alloc exp-1-[25,28,34,39,46-47,49],exp-2-[01-03,06,08,10-11,13,15,17,19-20,22-24,27-34,36-37,39,42-44,47-52,55],exp-3-[03-08,10,12-18,23-24,26-27,29-32,34-38,40-44,47-52,56],exp-4-[01-13,15-21,23-24,27-55],exp-5-[01-30,32-34,43-44,47],exp-6-[01-12,16-17,19-21,23-38,41-48,50-51,53-56],exp-7-[02-17,19,21-23,25],exp-8-[02-03,05,07,10-11,17-34,37-40,42-56],exp-9-[01-15,17-19,21-26,42-50,52-54],exp-10-[01-18,23-27,34-35,47,55],exp-12-[01-03,51-53],exp-13-[28,45-49],exp-14-[27-28,33-50]
+compute           up 2-00:00:00    220   idle exp-1-[51-52],exp-3-[20-21],exp-5-[35-41,48-56],exp-6-[13-14],exp-7-[26-56],exp-9-[27-41],exp-10-[28-33,36-46,48-54],exp-12-[04-50,54-56],exp-13-[01-27,29-44],exp-14-[01-26,30-32,51-56]
+debug             up      30:00      1    mix exp-9-56
+debug             up      30:00      1  alloc exp-9-55
+gpu               up 2-00:00:00      1  drng@ exp-2-57
+gpu               up 2-00:00:00      6   resv exp-16-[57-59],exp-17-[57-59]
+gpu               up 2-00:00:00     22    mix exp-1-[57,59-60],exp-2-60,exp-3-59,exp-4-[57,59-60],exp-5-[58,60],exp-6-[57,59],exp-7-58,exp-8-[57-58],exp-9-[57-58],exp-12-[58-59],exp-13-[57-58],exp-14-58
+gpu               up 2-00:00:00     27  alloc exp-1-58,exp-2-[58-59],exp-3-[57-58,60],exp-4-58,exp-5-[57,59],exp-6-[58,60],exp-7-57,exp-8-[59-60],exp-9-[59-60],exp-10-[57-60],exp-12-[57,60],exp-13-[59-60],exp-14-[57,59-60]
+gpu-debug         up      30:00      1    mix exp-7-59
+gpu-debug         up      30:00      1   idle exp-7-60
+gpu-preempt       up 7-00:00:00      1  drng@ exp-2-57
+gpu-preempt       up 7-00:00:00     22    mix exp-1-[57,59-60],exp-2-60,exp-3-59,exp-4-[57,59-60],exp-5-[58,60],exp-6-[57,59],exp-7-58,exp-8-[57-58],exp-9-[57-58],exp-12-[58-59],exp-13-[57-58],exp-14-58
+gpu-preempt       up 7-00:00:00     27  alloc exp-1-58,exp-2-[58-59],exp-3-[57-58,60],exp-4-58,exp-5-[57,59],exp-6-[58,60],exp-7-57,exp-8-[59-60],exp-9-[59-60],exp-10-[57-60],exp-12-[57,60],exp-13-[59-60],exp-14-[57,59-60]
+gpu-shared        up 2-00:00:00      1  drng@ exp-2-57
+gpu-shared        up 2-00:00:00      6   resv exp-16-[57-59],exp-17-[57-59]
+gpu-shared        up 2-00:00:00     22    mix exp-1-[57,59-60],exp-2-60,exp-3-59,exp-4-[57,59-60],exp-5-[58,60],exp-6-[57,59],exp-7-58,exp-8-[57-58],exp-9-[57-58],exp-12-[58-59],exp-13-[57-58],exp-14-58
+gpu-shared        up 2-00:00:00     27  alloc exp-1-58,exp-2-[58-59],exp-3-[57-58,60],exp-4-58,exp-5-[57,59],exp-6-[58,60],exp-7-57,exp-8-[59-60],exp-9-[59-60],exp-10-[57-60],exp-12-[57,60],exp-13-[59-60],exp-14-[57,59-60]
+ind-compute       up 2-00:00:00      1  drng@ exp-15-02
+ind-compute       up 2-00:00:00      1   resv exp-15-56
+ind-compute       up 2-00:00:00      8    mix exp-15-[03-07,09-11]
+ind-compute       up 2-00:00:00      1  alloc exp-15-01
+ind-compute       up 2-00:00:00     45   idle exp-15-[08,12-55]
+ind-gpu           up 2-00:00:00      1  inval exp-15-60
+ind-gpu           up 2-00:00:00      1   resv exp-15-57
+...
+ind-shared        up 2-00:00:00      1  alloc exp-15-01
+ind-shared        up 2-00:00:00     45   idle exp-15-[08,12-55]
+large-shared      up 2-00:00:00      4   idle exp-11-[01-04]
+preempt           up 7-00:00:00      1  drng@ exp-2-40
+preempt           up 7-00:00:00      4 drain$ exp-8-[13-16]
+preempt           up 7-00:00:00      2 drain* exp-13-[55-56]
+...
+preempt           up 7-00:00:00    220   idle exp-1-[51-52],exp-3-[20-21],exp-5-[35-41,48-56],exp-6-[13-14],exp-7-[26-56],exp-9-[27-41],exp-10-[28-33,36-46,48-54],exp-12-[04-50,54-56],exp-13-[01-27,29-44],exp-14-[01-26,30-32,51-56]
+shared*           up 2-00:00:00      1  drng@ exp-2-40
+shared*           up 2-00:00:00      4 drain$ exp-8-[13-16]
+shared*           up 2-00:00:00      2 drain* exp-13-[55-56]
+shared*           up 2-00:00:00      8   resv exp-16-[53-56],exp-17-[53-56]
+shared*           up 2-00:00:00    124    mix exp-1-[01-24,26-27,29-33,35-38,40-45,48,50,53-56],exp-2-[04-05,07,09,12,14,16,18,21,25-26,35,38,41,45-46,53-54,56],exp-3-[01-02,09,11,19,22,25,28,33,39,45-46,53-55],exp-4-[14,22,25-26,56],exp-5-[31,42,45-46],exp-6-[15,18,22,39-40,49,52],exp-7-[01,18,20,24],exp-8-[01,04,06,08-09,12,35-36,41],exp-9-[16,20,51],exp-10-[19-22,56],exp-13-[50-54],exp-14-29
+shared*           up 2-00:00:00    375  alloc exp-1-[25,28,34,39,46-47,49],exp-2-[01-03,06,08,10-11,13,15,17,19-20,22-24,27-34,36-37,39,42-44,47-52,55],exp-3-[03-08,10,12-18,23-24,26-27,29-32,34-38,40-44,47-52,56],exp-4-[01-13,15-21,23-24,27-55],exp-5-[01-30,32-34,43-44,47],exp-6-[01-12,16-17,19-21,23-38,41-48,50-51,53-56],exp-7-[02-17,19,21-23,25],exp-8-[02-03,05,07,10-11,17-34,37-40,42-56],exp-9-[01-15,17-19,21-26,42-50,52-54],exp-10-[01-18,23-27,34-35,47,55],exp-12-[01-03,51-53],exp-13-[28,45-49],exp-14-[27-28,33-50]
+shared*           up 2-00:00:00    220   idle exp-1-[51-52],exp-3-[20-21],exp-5-[35-41,48-56],exp-6-[13-14],exp-7-[26-56],exp-9-[27-41],exp-10-[28-33,36-46,48-54],exp-12-[04-50,54-56],exp-13-[01-27,29-44],exp-14-[01-26,30-32,51-56]
+[mkandes@login01 ~]$
+```
+
+### Clone the Repository
 
 Next, let's clone the [4pi](https://github.com/mkandes/4pi) repo to your `HOME` directory on the HPC system.
 
