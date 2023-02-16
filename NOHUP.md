@@ -369,6 +369,30 @@ only set nice values from 0 to 19. The default value is **0**.
 nohup nice -n 19 time -p python3 pi.py 100000000 &
 ```
 
+```
+nohup nice time -p python3 pi.py 100000000 &
+```
+
+```
+nohup time -p python3 pi.py 100000000 &
+```
+
+*Output*
+
+```
+top - 03:36:17 up 2 min,  1 user,  load average: 1.45, 0.52, 0.19
+Tasks: 166 total,   4 running, 162 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 50.1 us,  0.0 sy, 49.9 ni,  0.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   5934.0 total,   4779.8 free,    331.7 used,    822.5 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5366.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+  25753 ubuntu    20   0   17624  11024   6268 R 100.0   0.2   0:25.44 python3  
+  25751 ubuntu    30  10   17624  10884   6128 R  88.0   0.2   0:27.45 python3  
+  25749 ubuntu    39  19   17624  10884   6128 R  12.0   0.2   0:17.17 python3  
+  19423 ubuntu    20   0   19196  10032   8312 S   0.0   0.2   0:00.07 systemd
+```
+
 #
 
 Next Section - [From Zero to Batch: Your first batch job and more](BATCH.md)
