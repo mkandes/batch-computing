@@ -28,6 +28,8 @@
 
 ### Your HPC Community (When You Brake the System)
 
+![simpsons-angry-mob](simpsons-angry-mob.png)
+
 ### Managing an HPC System
 
 
