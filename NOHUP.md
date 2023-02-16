@@ -379,11 +379,14 @@ sys 0.00
 
 When managing processes on a shared, multi-user system, it's always good practice to also control 
 the priority of your processes as all systems have a limited amount of compute resources available 
-at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the command that allows 
-you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the 
-highest priority that can be assigned to a process, while **19** is the lowest. Note, however, 
-only the `root` user can set the nice value from -20 to 19. Regular users can only set nice values
-between 0 and 19. The default value is **0**. 
+at any given time. 
+
+[`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the command that allows you to assign and 
+execute a program with a relative CPU priority, which affects how the process is 
+***[scheduled](https://en.wikipedia.org/wiki/Scheduling_(computing))*** by the operating system. 
+A *niceness* of -20 is the highest priority value that can be assigned to a process, while 
+19 is the lowest. Note, however, only the `root` user can set the nice values from -20 to 19. 
+Regular users can only use nice values between 0 and 19. The default value is 0. 
 
 *Command*
 
