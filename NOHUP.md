@@ -80,59 +80,52 @@ pi_omp.o: pi_omp.f90
 .PHONY: clean
 clean:
 	rm *.x *.o
-$ ls c/
-pi.c
-$ cd bash/
-$ ls bash/
-pi.sh
+$
 ```
 
-### Working with bash/pi.sh
+### Computing Pi with Py
 
-We'll start with the `pi.sh` shell script, which has three different command-line options that must be specified at runtime.
+We'll start with the python program `pi.py`, which requires only one command-line argument to be specified at runtime.
 
 *Command*
 
 ```
-head -n 15 pi.sh
+python3 pi.py --help
 ```
 
 *Output*
 
 ```
-$ head -n 15 pi.sh 
-#!/usr/bin/env bash
-#
-# Estimate the value of Pi via Monte Carlo
+$ python3 pi.py --help
+usage: pi.py [-h] [-v] samples
 
-# Read in and parse input variables from command-line arguments
-if (( "${#}" > 0 )); then
-  while (( "${#}" > 0 )); do
-    case "${1}" in
-      -b | --bytes ) bytes="${2}" ;;
-      -r | --round ) round="${2}" ;;
-      -s | --samples ) samples="${2}" ;;
-    esac
-    shift 2
-  done
-fi
+Estimate the value of Pi via Monte Carlo
+
+positional arguments:
+  samples        number of Monte Carlo samples
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose
+$
 ```
 
 ### Estimating $\pi$ for the first time
 
-Run `pi.sh` with these initial input parameters, then increase the number of samples (`-s`) used to estimate $\pi$.
+Start by running `pi.py` with 1M samples, then increase the number of samples used to estimate $\pi$.
 
 *Command* 
 
 ```
-./pi.sh -b 8 -r 5 -s 1000
+python3 pi.py 1000000
 ```
 
 *Output*
 
 ```
-$ ./pi.sh -b 8 -r 5 -s 1000
-3.15200
+$ python3 pi.py 1000000
+3.14000314000314
+$
 ```
 
 ### Measuring Runtime
@@ -142,17 +135,18 @@ Measure the runtime of the program with the [`time`](https://en.wikipedia.org/wi
 *Command* 
 
 ```
-time -p ./pi.sh -b 8 -r 5 -s 1000
+time -p python3 pi.py 1000000
 ```
 
 *Output*
 
 ```
-$ time -p ./pi.sh -b 8 -r 5 -s 1000
-3.18400
-real 6.13
-user 5.37
-sys 1.13
+$ time -p python3 pi.py 1000000
+3.1445391445391446
+real 0.63
+user 0.62
+sys 0.01
+$
 ```
 
 ### Background vs. Foreground Processes
@@ -195,13 +189,13 @@ following information for each process by default:
 
 ### Interrupt a Foreground Process from the Keyboard
 
-Re-run `pi.sh` with a large number of samples to increase its runtime (and accuracy) and then open another terminal to view the running process
+Re-run `pi.py` with a large number of samples to increase its runtime (and accuracy) and then open another terminal to view the running process
 with the `top` command.
 
 *Command: Terminal 1* 
 
 ```
-time -p ./pi.sh -b 8 -r 5 -s 100000
+time -p python3 pi.py 1000000000
 ```
 
 *Command: Terminal 2* 
@@ -213,52 +207,64 @@ top -u $USER
 *Output: Terminal 2*
 
 ```
-top - 12:05:06 up 1 day,  5:26,  1 user,  load average: 1.42, 1.62, 1.29
-Tasks: 304 total,   1 running, 302 sleeping,   0 stopped,   1 zombie
-%Cpu(s):  7.3 us, 11.2 sy,  0.0 ni, 81.4 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
-MiB Mem :  31820.4 total,  18022.0 free,   5115.7 used,   8682.7 buff/cache
-MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25209.0 avail Mem 
+top - 03:55:23 up 21 min,  2 users,  load average: 0.19, 0.13, 0.16
+Tasks: 150 total,   2 running, 148 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 49.8 us,  0.2 sy,  0.0 ni, 49.8 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st
+MiB Mem :   5934.0 total,   4422.3 free,    316.4 used,   1195.3 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5371.9 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
-1091257 mkandes   20   0    9500   3304   3036 S  12.0   0.0   0:08.19 bash
+  26401 ubuntu    20   0   17612  10996   6252 R  99.7   0.2   0:10.55 python3  
+  19423 ubuntu    20   0   19196  10036   8312 S   0.0   0.2   0:00.07 systemd  
+  19425 ubuntu    20   0  104624   3640     12 S   0.0   0.1   0:00.00 (sd-pam) 
+  19454 ubuntu    20   0  279488  13972  12096 S   0.0   0.2   0:00.04 pulseau+ 
+  19456 ubuntu    39  19 1116580  23752  15876 S   0.0   0.4   0:00.10 tracker+ 
+  19490 ubuntu    20   0    7396   4400   3892 S   0.0   0.1   0:00.03 dbus-da+ 
+  19510 ubuntu    20   0  238872   7696   6808 S   0.0   0.1   0:00.01 gvfsd    
+  19521 ubuntu    20   0  312812   6160   5560 S   0.0   0.1   0:00.00 gvfsd-f+
 ...
 ```
 
-Return to the terminal running `pi.sh` and interrupt the process by holding down the `ctrl` key with the letter `C` on your keyboard, 
+Return to the terminal running `pi.py` and interrupt the process by holding down the `ctrl` key with the letter `C` on your keyboard, 
 which sends a `SIGINT` [signal](https://en.wikipedia.org/wiki/Signal_(IPC)) to the process and terminiates it immediately.
 
 *Output: Terminal 1*
 
 ```
-$ time -p ./pi.sh -b 8 -r 5 -s 100000
+$ time -p python3 pi.py 1000000000
 ^C
-real 169.53
-user 148.93
-sys 31.79
+Traceback (most recent call last):
+  File "pi.py", line 29, in <module>
+    z = math.sqrt(x**2 + y**2)
+KeyboardInterrupt
+
+real 81.93
+user 81.91
+sys 0.00
 $
 ```
 
 ### Background a Process
 
 You can run any command from your terminal as a background process by appending it with a space and then the ampersand (`&`) symbol. For example,
-re-run `pi.sh` with a large number of samples again.
+re-run `pi.py` with a large number of samples again.
 
 *Command: Terminal 1* 
 
 ```
-time -p ./pi.sh -b 8 -r 5 -s 100000 &
+time -p python3 pi.py 1000000000 &
 ```
 
 *Output: Terminal 1*
 
 ```
-$ time -p ./pi.sh -b 8 -r 5 -s 100000 &
-[1] 2737700
+$ time -p python3 pi.py 1000000000 &
+[1] 26503
 $
 ```
 
-After printing the`PID` of the background process to standard output, the shell prompt is returned to your control, where you can run 
-another command such as viewing the background process with `top`. 
+After printing the`PID` of the background process to [standard output](https://en.wikipedia.org/wiki/Standard_streams), the shell prompt is 
+returned to your control, where you can run another command such as viewing the background process with `top`. 
 
 *Command: Terminal 1*
 
@@ -269,13 +275,14 @@ top -p "$(($!+1))"
 *Output: Terminal 1*
 
 ```
-Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  9.4 us,  9.4 sy,  0.0 ni, 81.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-MiB Mem :  31820.4 total,  17271.1 free,   5583.0 used,   8966.3 buff/cache
-MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  24732.1 avail Mem 
+top - 04:04:05 up 30 min,  2 users,  load average: 0.87, 0.60, 0.38
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 50.2 us,  0.0 sy,  0.0 ni, 49.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   5934.0 total,   4414.7 free,    321.5 used,   1197.9 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5366.6 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
-2737701 mkandes   20   0    9500   3404   3136 S  13.3   0.0   0:16.69 bash
+  26504 ubuntu    20   0   17612  10964   6220 R 100.0   0.2   1:34.48 python3
 ```
 
 Here, we've used the special environment variable `$!`, which returns the `PID` of the last executed command. Why do we add `+1` to this 
@@ -283,29 +290,36 @@ integer value?
 
 ### Kill a Background Process
 
-While `top` continues to run on your `bash` command from `pi.sh`, [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process from
-the other terminal. 
+While `top` continues to run on your `python3` command, [`kill`](https://en.wikipedia.org/wiki/Kill_(command)) the process from
+the other terminal.
 
 *Command: Terminal 2*
 
 ```
-kill  2737701
+kill 26504
 ```
 
-When executed, you should see the process `Terminated` and disappear from `top`'s process table. Next, exit `top` and restart `pi.sh` 
-from the same terminal. 
+*Output: Terminal 2*
+
+```
+$ kill 26504
+$
+```
+
+When executed, you should see the process `Terminated` and disappear from `top`'s process table. Next, exit `top` and restart `pi.py` 
+from the same terminal.
 
 *Command: Terminal 1*
 
 ```
-time -p ./pi.sh -b 8 -r 5 -s 100000 &
+time -p python3 pi.py 1000000000 &
 ```
 
 *Output: Terminal 1*
 
 ```
-$ time -p ./pi.sh -b 8 -r 5 -s 100000 &
-[1] 3990461
+$ time -p python3 pi.py 1000000000 &
+[1] 26510
 $
 ```
 
@@ -314,54 +328,56 @@ Then use `top` again to display the process, but from the other terminal.
 *Command: Terminal 2*
 
 ```
-top -p 3990462
+top -p 26511
 ```
 
 *Output: Terminal 2*
 
 ```
-top - 15:41:44 up 1 day,  9:03,  1 user,  load average: 2.83, 2.31, 2.03
-Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
-%Cpu(s): 14.3 us, 11.6 sy,  0.0 ni, 73.9 id,  0.1 wa,  0.0 hi,  0.1 si,  0.0 st
-MiB Mem :  31820.4 total,  17598.8 free,   5143.1 used,   9078.6 buff/cache
-MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25115.4 avail Mem 
+top - 04:08:23 up 34 min,  2 users,  load average: 0.93, 0.73, 0.50
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 50.1 us,  0.0 sy,  0.0 ni, 49.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   5934.0 total,   4415.4 free,    320.7 used,   1197.9 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5367.4 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
-3990462 mkandes   20   0    9500   3232   2964 S  12.7   0.0   0:23.85 bash
+  26511 ubuntu    20   0   17612  10948   6204 R  99.5   0.2   2:01.61 python3
 ```
 
 What happens if you close the original terminal where you restarted `pi.sh`?
 
-### Set It and Forget It with NoHUP
+### Set It and Forget It
 
 [`nohup`](https://en.wikipedia.org/wiki/Nohup) is short for *no hang up*. Any program started with the `nohup` command will ignore 
 the [`SIGHUP`](https://en.wikipedia.org/wiki/SIGHUP) signal and, therefore, allow the program and its process to continue to run,
 even after closing or exiting the terminal. 
 
-Restart `pi.sh` with `nohup`.
+Restart `pi.py` with `nohup`, but with a fewer samples. 
 
 *Command*
 
 ```
-nohup time -p ./pi.sh -b 8 -r 5 -s 100000 &
+nohup time -p python3 pi.py 100000000 &
 ```
 
 *Output*
 
 ```
-$ nohup time -p ./pi.sh -b 8 -r 5 -s 100000 &
-[1] 1026447
+$ nohup time -p python3 pi.py 100000000 &
+[1] 26617
 $ nohup: ignoring input and appending output to 'nohup.out'
 $
 ```
 
-### Control Priority Nice-ly
+### Controlling Priority
 
-When managing processes on a shared, multi-user system, it's always good practice to also control the priority of your processes as all systems
-have a limited amount of compute resources available at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the 
-command that allows you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the highest priority that can be 
-assigned to a process, while **19** is the lowest. Note, however, only the `root` user can set the nice value from -20 to 19. Regular users can 
-only set nice values from 0 to 19. The default value is **0**. 
+When managing processes on a shared, multi-user system, it's always good practice to also control 
+the priority of your processes as all systems have a limited amount of compute resources available 
+at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the command that allows 
+you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the 
+highest priority that can be assigned to a process, while **19** is the lowest. Note, however, 
+only the `root` user can set the nice value from -20 to 19. Regular users can only set nice values
+from 0 to 19. The default value is **0**. 
 
 *Command*
 
