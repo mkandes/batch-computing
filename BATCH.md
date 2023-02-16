@@ -11,10 +11,6 @@
 
 ![standard-hpc-ecosystem](standard-hpc-ecosystem.jpg)
 
-<br>
-<br>
-<br>
-
 ### HPC System Architecture
 
 ![expanse-system-architecture](expanse-system-architecture.png)
@@ -22,56 +18,15 @@
 - [Expanse: Computing Without Boundaries](https://expanse.sdsc.edu)
 - [Expanse: Building a Supercomputer](https://www.youtube.com/watch?v=uNZyg6X_t3s)
 
-<br>
-<br>
-<br>
-
 ### HPC Storage Systems & External Networks
 
 ![expanse-storage-external-networks](expanse-storage-external-networks.png)
-
-<br>
-<br>
-<br>
-
-### You as a New HPC User
-
-![homer-simpson-glasses](homer-simpson-glasses.jpg)
-
-<br>
-<br>
-<br>
-
-### You Will Make Mistakes --- That's Okay, But ...
-
-![homer-computer-doh](homer-computer-doh.jpg)
-
-<br>
-<br>
-<br>
-
-### Your HPC Community (When You Brake the System)
-
-![simpsons-angry-mob](simpsons-angry-mob.png)
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ### Managing an HPC System
 
 ![slurm-architecture](https://slurm.schedmd.com/arch.gif)
 
-<br>
-<br>
-<br>
-
-### Learning to Talk the Talk
-
-![air-traffic-control](air-traffic-control.jpg)
+### Your First Batch Job
 
 
 
