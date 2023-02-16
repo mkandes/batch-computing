@@ -22,7 +22,10 @@
 
 ![expanse-storage-external-networks](expanse-storage-external-networks.png)
 
-### Managing an HPC System
+### Managing an HPC System: You Need a New Type of Scheduler
+
+[Slurm](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) is an open source, fault-tolerant, and highly 
+scalable HPC management and job scheduling system.
 
 ![slurm-architecture](https://slurm.schedmd.com/arch.gif)
 
