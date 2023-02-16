@@ -70,7 +70,7 @@ Last login: Wed Feb 15 14:35:40 2023 from 208.58.214.56
 [username@login01 ~]$
 ````
 
-Then clone the [4pi] repo to your `HOME` directory. 
+Then clone the [4pi](https://github.com/mkandes/4pi) repo to your `HOME` directory. 
 
 *Command*
 
