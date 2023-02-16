@@ -16,7 +16,7 @@ Recommendation for Windows users: If you have not done so already, at some point
 
 ## Tutorial
 
-- [Nohup No Mas: Manually managing Linux processes](NOHUP.md)
+- [Nohup No Mas: Managing Linux processes](NOHUP.md)
 - [From Zero to Batch: Your first batch job and more](BATCH.md)
 - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
 - [Beyond the Basics: Batch job arrays and dependencies](BEYOND.md)
