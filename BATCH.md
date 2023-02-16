@@ -16,7 +16,7 @@
 ![expanse-system-architecture](expanse-system-architecture.png)
 
 - [Expanse: Computing Without Boundaries](https://expanse.sdsc.edu)
-- [Expanse: Building a Supercomputer](https://ww.youtube.com/watch?v=uNZyg6X_t3s)
+- [Expanse: Building a Supercomputer](https://www.youtube.com/watch?v=uNZyg6X_t3s)
 
 ### Storage Systems & External Networks
 
