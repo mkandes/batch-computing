@@ -260,4 +260,19 @@ To create your first batch job script, you'll need to open a new file in your te
 python3 pi.py 100000000
 ```
 
+### More Examples
+
+```
+[username@login01 ~]$ ls /cm/shared/examples/sdsc/
+abaqus     dftbplus  lammps             nwchem    qe          vasp
+abinit     excerpt   localscratch       openacc   raxml       vasp-ase
+alphafold  gamess    matlab             openmp    si          visit
+amber      gaussian  mpi                orca      siesta      wannier90
+bintest    gromacs   mpi-openmp-hybrid  paraview  spark       xpmem
+ciml       hadoop    namd               pyscf     tensorflow
+classes    hpcg      neuron             pytorch   test
+cp2k       hpl       nsight             qchem     trinity
+[mkandes@login01 ~]$
+```
+
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
