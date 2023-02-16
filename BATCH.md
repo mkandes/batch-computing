@@ -26,7 +26,7 @@
 
 ![homer-simpson-glasses](homer-simpson-glasses.jpg)
 
-![homer-computer-doh)(homer-computer-doh.jpg)
+![homer-computer-doh](homer-computer-doh.jpg)
 
 ### Your HPC Community (When You Brake the System)
 
