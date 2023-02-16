@@ -83,7 +83,7 @@ clean:
 $
 ```
 
-### Computing `\pi` with Python
+### Computing $\pi$ with Python
 
 We'll start with `pi.py`, which requires only one command-line argument to be specified at runtime.
 
