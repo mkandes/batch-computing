@@ -244,4 +244,20 @@ To create your first batch job script, you'll need to open a new file in your te
 [username@login01 ~]$ vi run-4pi.sh
 ```
 
+```
+#!/usr/bin/env bash
+
+#SBATCH --job-name=my-4pi-test
+#SBATCH --account=abc123
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=1G
+#SBATCH --time=00:05:00
+#SBATCH --output=%x.o%j.%N
+
+python3 pi.py 100000000
+```
+
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
