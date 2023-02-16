@@ -11,6 +11,12 @@
 
 ![standard-hpc-ecosystem](standard-hpc-ecosystem.jpg)
 
-#
+### System Architecture
+
+![](https://www.sdsc.edu/assets/images/expanse_web_banner-1220.jpg)
+
+### Storage Systems & External Networks
+
+
 
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
