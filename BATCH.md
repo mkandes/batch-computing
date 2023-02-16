@@ -22,5 +22,13 @@
 
 ![expanse-storage-external-networks](expanse-storage-external-networks.png)
 
+### Your Standard New HPC User
+
+### Your HPC Community When The System Is Down (or Busy)
+
+
+### Managing an HPC System
+
+
 
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
