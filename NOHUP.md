@@ -16,8 +16,6 @@ that is being executed by one or more [threads](https://en.wikipedia.org/wiki/Th
 
 ### Example Program: Estimating $\pi$ via Monte Carlo
 
-![Estimate the value of Pi via Monte Carlo](https://hpc.llnl.gov/sites/default/files/styles/no_sidebar_3_up/public/pi1.gif)
-
 To explore managing procesess, we'll need an example program to run. Here, we'll start by working with the [4pi](https://github.com/mkandes/4pi) project,
 a collection of simple computer programs that estimate the value of $\pi$. Each program in the collection differs only in the programming language 
 it was written in, the set of features of the language it utilized, and/or the fundamental underlying mathematical algorithm it implemented to approximate
@@ -25,6 +23,9 @@ the value of $\pi$. The aim of the project is to explore different aspects of ea
 high-performance computing perspective. The first set of programs included in the project estimate the value of $\pi$ via the Monte Carlo method. This 
 solution is particularly useful for exploring different parallel programming models, languages, libraries, and APIs as it is an embarrassingly parallel
 (albeit inefficient) solution to the problem.
+
+![Estimate the value of Pi via Monte Carlo](https://hpc.llnl.gov/sites/default/files/styles/no_sidebar_3_up/public/pi1.gif)
+
 
 ### Clone the Repository
 
