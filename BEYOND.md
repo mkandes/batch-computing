@@ -7,9 +7,7 @@
 
 ## Getting Your Fair-Share: How to negotiate with the scheduler
 
-### Job Arrays
-
-### Job Dependencies
+https://github.com/sdsc/sdsc-summer-institute-2022/tree/main/3.5_high_throughput_computing
 
 
 #
