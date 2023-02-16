@@ -357,27 +357,17 @@ $
 
 ### Control Priority Nice-ly
 
-When working on a shared compute resource where you are manually managing processes, it's always good practice to control priority as 
-each system has a limited amount of compute resources. For example, you can check the number of CPU cores available on your system with the `lscpu` command.
+When managing processes manually, it's always good practice to also control their priority, especially when working on a shared, multiuser system, 
+as all systems have a limited amount of compute resources available at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the 
+command that allows you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the highest priority you can assign 
+to a process, while **19** is the lowest. The default value is **0**. 
 
-```
-$ lscpu
-Architecture:                    x86_64
-CPU op-mode(s):                  32-bit, 64-bit
-Byte Order:                      Little Endian
-Address sizes:                   39 bits physical, 48 bits virtual
-CPU(s):                          8
-On-line CPU(s) list:             0-7
-Thread(s) per core:              2
-**Core(s) per socket:              4**
-Socket(s):                       1
-NUMA node(s):                    1
-Vendor ID:                       GenuineIntel
-CPU family:                      6
-Model:                           140
-Model name:                      11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
-...
-```
+Let's restart a few `pi.sh` calculations with different priority
+
+*Command*
+
+
+
 
 
 ## Additional References
