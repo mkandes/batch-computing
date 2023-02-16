@@ -9,6 +9,7 @@
 
 ### Your Standard HPC Ecosystem
 
+![standard-hpc-ecosystem](standard-hpc-ecosystem.jpg)
 
 #
 
