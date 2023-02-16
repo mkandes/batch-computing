@@ -34,6 +34,12 @@
 
 ### Managing an HPC System
 
+![slurm-architecture](https://slurm.schedmd.com/arch.gif)
+
+### Learning to Talk the Talk
+
+![air-traffic-control](air-traffic-control.jpg)
+
 
 
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
