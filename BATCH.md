@@ -17,6 +17,7 @@
 
 ### Storage Systems & External Networks
 
+![expanse-storage-external-networks](expanse-storage-external-networks.png)
 
 
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
