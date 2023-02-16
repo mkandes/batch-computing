@@ -238,6 +238,10 @@ Unpacking objects: 100% (19/19), 5.72 KiB | 7.00 KiB/s, done.
 
 ### Your First Batch Job
 
+To create your first batch job script, you'll need to open a new file in your text editor of choice.
 
+```
+[username@login01 ~]$ vi run-4pi.sh
+```
 
 Next Section - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
