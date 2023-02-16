@@ -14,4 +14,4 @@
 
 #
 
-End - [Getting Started with Batch Job Scheduling: Slurm Edition](README.md)
+The End - [Getting Started with Batch Job Scheduling: Slurm Edition](README.md)
