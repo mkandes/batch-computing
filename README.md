@@ -23,7 +23,7 @@ Recommendation for Windows users: If you have not done so already, at some point
 
 ### Additional References
 
-- [Batch Jobs @ SDSC Summer Insitute 2022](https://github.com/sdsc/sdsc-summer-institute-2022/blob/main/2.4_batch_computing/MThomas-SDSC-SI22-Batch-Jobs-July-27-Computing-Jul2022.pdf)
+- [Batch Computing @ SDSC Summer Insitute 2022](https://education.sdsc.edu/training/interactive/202208_sdscsi/section2_4)
 - [Slurm Quickstart User Guide](https://slurm.schedmd.com/quickstart.html)
 
 #
