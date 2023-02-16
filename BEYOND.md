@@ -5,10 +5,9 @@
 - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
 - [Beyond the Basics: Batch job arrays and dependencies](BEYOND.md)
 
-## Getting Your Fair-Share: How to negotiate with the scheduler
+## Beyond the Basics: Batch job arrays and dependencies
 
 https://github.com/sdsc/sdsc-summer-institute-2022/tree/main/3.5_high_throughput_computing
-
 
 #
 
