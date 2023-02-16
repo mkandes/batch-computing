@@ -83,9 +83,9 @@ clean:
 $
 ```
 
-### Computing Pi with Py
+### Computing Pi with Python
 
-We'll start with the python program `pi.py`, which requires only one command-line argument to be specified at runtime.
+We'll start with `pi.py`, which requires only one command-line argument to be specified at runtime.
 
 *Command*
 
