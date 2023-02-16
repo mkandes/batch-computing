@@ -5,7 +5,7 @@
 - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
 - [Beyond the Basics: Batch job arrays and dependencies](BEYOND.md)
 
-## Nohup No Mas: A quick review of managing Linux processes
+## Nohup No Mas: Manually managing Linux processes
 
 ### What is a Process?
 
@@ -332,7 +332,7 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  25115.4 avail Mem
 
 What happens if you close the original terminal where you restarted `pi.sh`?
 
-### Set It and Forget It
+### Set It and Forget It with NoHUP
 
 [`nohup`](https://en.wikipedia.org/wiki/Nohup) is short for *no hang up*. Any program started with the `nohup` command will ignore 
 the [`SIGHUP`](https://en.wikipedia.org/wiki/SIGHUP) signal and, therefore, allow the program and its process to continue to run,
@@ -355,7 +355,7 @@ $ nohup: ignoring input and appending output to 'nohup.out'
 $
 ```
 
-### But Be Good
+### Control Priority Nice-ly
 
 When working on a shared compute resource where you are manually managing processes, it's always good practice to set a 
 
