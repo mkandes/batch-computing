@@ -26,15 +26,29 @@
 
 ![homer-simpson-glasses](homer-simpson-glasses.jpg)
 
+<br>
+
 ![homer-computer-doh](homer-computer-doh.jpg)
+
+<br>
+<br>
+<br>
 
 ### Your HPC Community (When You Brake the System)
 
 ![simpsons-angry-mob](simpsons-angry-mob.png)
 
+<br>
+<br>
+<br>
+
 ### Managing an HPC System
 
 ![slurm-architecture](https://slurm.schedmd.com/arch.gif)
+
+<br>
+<br>
+<br>
 
 ### Learning to Talk the Talk
 
