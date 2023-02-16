@@ -357,7 +357,8 @@ $
 
 ### Control Priority Nice-ly
 
-When working on a shared compute resource where you are manually managing processes, it's always good practice to set a 
+When working on a shared compute resource where you are manually managing processes, it's always good practice to control priority as 
+each system has a limited amount of compute resources. For example, you can check the number of CPU cores available on your system with the `lscpu` command.
 
 ```
 $ lscpu
@@ -368,7 +369,7 @@ Address sizes:                   39 bits physical, 48 bits virtual
 CPU(s):                          8
 On-line CPU(s) list:             0-7
 Thread(s) per core:              2
-Core(s) per socket:              4
+**Core(s) per socket:              4**
 Socket(s):                       1
 NUMA node(s):                    1
 Vendor ID:                       GenuineIntel
