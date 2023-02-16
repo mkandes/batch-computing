@@ -247,7 +247,7 @@ To create your first batch job script, you'll need to open a new file in your te
 ```
 #!/usr/bin/env bash
 
-#SBATCH --job-name=my-4pi-test
+#SBATCH --job-name=my-first-4pi-test
 #SBATCH --account=abc123
 #SBATCH --partition=debug
 #SBATCH --nodes=1
