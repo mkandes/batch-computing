@@ -5,7 +5,7 @@
 - [Getting Your Fair-Share: How to negotiate with the scheduler](FAIRSHARE.md)
 - [Beyond the Basics: Batch job arrays and dependencies](BEYOND.md)
 
-## Nohup No Mas: Manually managing Linux processes
+## Nohup No Mas: Managing Linux processes
 
 ### What is a Process?
 
@@ -357,15 +357,11 @@ $
 
 ### Control Priority Nice-ly
 
-When managing processes manually, it's always good practice to also control their priority, especially when working on a shared, multiuser system, 
-as all systems have a limited amount of compute resources available at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the 
-command that allows you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the highest priority you can 
-assign to a process, while **19** is the lowest. Note, however, only the `root` user can set the nice value from -20 to 19. Regular users can 
+When managing processes on a shared, multi-user system, it's always good practice to also control the priority of your processes as all systems
+have a limited amount of compute resources available at any given time. [`nice`](https://en.wikipedia.org/wiki/Nice_(Unix)) is the 
+command that allows you to assign and execute a program with a relative CPU priority. A *niceness* of **-20** is the highest priority that can be 
+assigned to a process, while **19** is the lowest. Note, however, only the `root` user can set the nice value from -20 to 19. Regular users can 
 only set nice values from 0 to 19. The default value is **0**. 
-
-## Additional References
-
-- 
 
 #
 
